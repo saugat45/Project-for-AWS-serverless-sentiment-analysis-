@@ -2,6 +2,32 @@ Project for AWS serverless sentiment analysis
   
 This project implements a serverless sentiment analysis pipeline using AWS services. It captures the mood of text files that have been uploaded, it keeps the records, and you may look at them whenever you need. The architecture follows the AWS free tier, and it will only spend money when it is being used.
 
+What does sentiment analysis involve?  
+
+Sentiment analysis refers to a sub-category of the text analytics field that determines the emotional mood of text. It manifests itself in practice:  
+• Product review: see what customers write about products in online shops.  
+• Crowdsource: monitor the social media buzz, whether it is politics or talk about the brand.  
+• Customer service: tag users that are angry or in a stressful state on chat records or ticket history.  
+• Market research: go through customer responses in surveys or the forums.  
+• Board communicator: automatically detect the existence of harmful posts or excessively negative chatter.  
+• Chatbots: respond differently to a user when he or she is either positive or critical.
+
+2. What makes the term serverless and AWS Free Tier a perfect match?  
+
+This project is an event-driven, cloud-native project which is inexpensive, scalable, secure, and extendable with new functionality.  
+• Affordable: no servers, thus it does not go beyond the boundaries of Free Tier.  
+• Scaleable: no needed capacity planning- scale up or scale down automatically.  
+• Safe: access control is based on IAM.  
+• Modular: are already divided into small and loosely coupled parts, which means that additional modules such as notifications, dashboards, or additional analytics will be easily integrated.
+
+
+3. Big takeaways  
+
+• In the case of sentiment analysis, it is still possible to read between the lines of the text and decipher the emotion behind the words.  
+Serverless No matter how large or small the demands placed on a computing system, it is scalable, adjustable, and cost-friendly, and therefore you are free to concentrate on development rather than running equipment.  
+• AWS Free Tier allows you to explore without afraid of huge payments.
+
+
 Overview
 
 1. To save the text input files, create an S3 bucket that is free.
@@ -27,33 +53,6 @@ IAM Roles - Safety Gives Lambda-Onto S3, Comprehend, and DynamoDB.
 Deployment and maintenance are very easy because all the components are fully managed.
 
 
-
-
-
-What does sentiment analysis involve?  
-
-Sentiment analysis refers to a sub-category of the text analytics field that determines the emotional mood of text. It manifests itself in practice:  
-• Product review: see what customers write about products in online shops.  
-• Crowdsource: monitor the social media buzz, whether it is politics or talk about the brand.  
-• Customer service: tag users that are angry or in a stressful state on chat records or ticket history.  
-• Market research: go through customer responses in surveys or the forums.  
-• Board communicator: automatically detect the existence of harmful posts or excessively negative chatter.  
-• Chatbots: respond differently to a user when he or she is either positive or critical.
-
-2. What makes the term serverless and AWS Free Tier a perfect match?  
-
-This project is an event-driven, cloud-native project which is inexpensive, scalable, secure, and extendable with new functionality.  
-• Affordable: no servers, thus it does not go beyond the boundaries of Free Tier.  
-• Scaleable: no needed capacity planning- scale up or scale down automatically.  
-• Safe: access control is based on IAM.  
-• Modular: are already divided into small and loosely coupled parts, which means that additional modules such as notifications, dashboards, or additional analytics will be easily integrated.
-
-
-3. Big takeaways  
-
-• In the case of sentiment analysis, it is still possible to read between the lines of the text and decipher the emotion behind the words.  
-Serverless No matter how large or small the demands placed on a computing system, it is scalable, adjustable, and cost-friendly, and therefore you are free to concentrate on development rather than running equipment.  
-• AWS Free Tier allows you to explore without afraid of huge payments.
 
 Detailed Explanation of Lambda Function Code
 
@@ -125,6 +124,7 @@ Third is to read the file in S3, convert it into in memory string, and give that
 During the process, the script scans against misses and makes the error noted in CloudWatch in order to troubleshoot later. When a part breaks, something, the Lambda will report such failure; hence, no one has the responsibility to sit and supervise the entire system.
 
 Conclusion
+
 This combination demonstrates how, in practice, it is possible to launch and turn off serverless services and conduct automatic sentiment analysis without any concerns with server management or infrastructure. Since AWS takes the load of scaling, securing, and costing, it suits so well when one intends to do some social-media monitoring, customer-feedback analysis, and so on.
 
 
